@@ -1,0 +1,20 @@
+docker compose up -d                      configura e inicia o docker
+nest start dev                            inicia a aplicação
+nest start --watch                        inicia a aplicação no modo watch
+nvm use v16.20.2                          usa a versão do node
+nvm alias default v16.20.2                definir a versão padrão do node
+node --version                            ver a verão do node utilizada
+npx prisma migrate dev --name init        roda a primeira migration
+
+
+ git add .
+ git commit -a -m "User CRUD"
+ git push origin main
+ git pull origin main
+
+
+ npm run test user.service.spec.ts          para rodar o teste user.service.spec.ts
+
+ npm run test                               rodar todos os testes no projeto
+
+ npm run test:cov                           para gerar o relatório de cobertura de testes
