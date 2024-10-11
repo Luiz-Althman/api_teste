@@ -43,7 +43,10 @@ async function bootstrap() {
       'The design and documentation platform for teams and individuals working with the OpenAPI Specification.',
     )
     .setVersion('1.0')
+    .addTag('hello')
+    .addTag('auth')
     .addTag('user')
+    .addBearerAuth()
     .build();
 
   const customOptions: SwaggerCustomOptions = {

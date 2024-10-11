@@ -18,3 +18,5 @@ npx prisma migrate dev --name init        roda a primeira migration
  npm run test                               rodar todos os testes no projeto
 
  npm run test:cov                           para gerar o relatório de cobertura de testes
+
+ http://localhost:3000/api                  url swagger

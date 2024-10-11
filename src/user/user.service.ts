@@ -75,4 +75,11 @@ export class UserService {
     });
     return `This action removes a #${id} user`;
   }
+
+  async findOneByEmail(email: string) {
+    const dataKeys = await this.prisma.user.findFirst({
+      where: { email },
+    });
+    return dataKeys;
+  }
 }
