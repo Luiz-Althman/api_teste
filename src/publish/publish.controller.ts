@@ -17,7 +17,7 @@ export class PublishController {
     return this.publishService.findAll();
   }
 
-  @Get('publishId')
+  @Get('by-id')
   findOne(@Body('id') id: number) {
     return this.publishService.findOne(+id);
   }
