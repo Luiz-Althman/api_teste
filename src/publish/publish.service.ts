@@ -14,12 +14,33 @@ export class PublishService {
   }
 
   async findAll() {
-    return this.prisma.publish.findMany();
+    return this.prisma.publish.findMany({
+      include: {
+        user: {
+          select: {
+            id: true,
+            name: true,
+            surname: true,
+          },
+        },
+        publish: true,
+      },
+    });
   }
 
   async findOne(id: number) {
     return this.prisma.publish.findUnique({
       where: { id },
+      include: {
+        user: {
+          select: {
+            id: true,
+            name: true,
+            surname: true,
+          },
+        },
+        publish: true,
+      },
     });
   }
 
@@ -65,6 +86,16 @@ export class PublishService {
   async findAllByUser(userId: number) {
     return this.prisma.publish.findMany({
       where: { userId },
+      include: {
+        user: {
+          select: {
+            id: true,
+            name: true,
+            surname: true,
+          },
+        },
+        publish: true,
+      },
     });
   }
 }

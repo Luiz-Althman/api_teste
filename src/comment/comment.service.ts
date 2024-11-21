@@ -13,12 +13,31 @@ export class CommentService {
   }
 
   findAll() {
-    return this.prisma.comment.findMany();
+    return this.prisma.comment.findMany({
+      include: {
+        user: {
+          select: {
+            id: true,
+            name: true,
+            surname: true,
+          },
+        },
+      },
+    });
   }
 
   findOne(id: number) {
     return this.prisma.comment.findUnique({
       where: { id },
+      include: {
+        user: {
+          select: {
+            id: true,
+            name: true,
+            surname: true,
+          },
+        },
+      },
     });
   }
 
@@ -58,6 +77,15 @@ export class CommentService {
   async findAllByUser(userId: number) {
     return this.prisma.comment.findMany({
       where: { userId },
+      include: {
+        user: {
+          select: {
+            id: true,
+            name: true,
+            surname: true,
+          },
+        },
+      },
     });
   }
 }
