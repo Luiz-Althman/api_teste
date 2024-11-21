@@ -22,6 +22,7 @@ export class CommentService {
             surname: true,
           },
         },
+        publish: true,
       },
     });
   }
@@ -37,6 +38,7 @@ export class CommentService {
             surname: true,
           },
         },
+        publish: true,
       },
     });
   }
@@ -85,6 +87,7 @@ export class CommentService {
             surname: true,
           },
         },
+        publish: true,
       },
     });
   }
