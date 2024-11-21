@@ -46,6 +46,8 @@ async function bootstrap() {
     .addTag('hello')
     .addTag('auth')
     .addTag('user')
+    .addTag('publish')
+    .addTag('comment')
     .addBearerAuth()
     .build();
 
