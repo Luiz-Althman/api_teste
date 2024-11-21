@@ -51,9 +51,15 @@ export class PublishService {
       );
     }
 
-    return this.prisma.publish.delete({
+    await this.prisma.comment.deleteMany({
+      where: { publishId: id },
+    });
+
+    await this.prisma.publish.delete({
       where: { id },
     });
+
+    return 'Você apagou a publicação com sucesso e todos os seus comentários.';
   }
 
   async findAllByUser(userId: number) {
