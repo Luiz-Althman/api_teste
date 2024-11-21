@@ -23,7 +23,7 @@ export class PublishService {
             surname: true,
           },
         },
-        publish: true,
+        comment: true,
       },
     });
   }
@@ -39,7 +39,7 @@ export class PublishService {
             surname: true,
           },
         },
-        publish: true,
+        comment: true,
       },
     });
   }
@@ -94,7 +94,7 @@ export class PublishService {
             surname: true,
           },
         },
-        publish: true,
+        comment: true,
       },
     });
   }
